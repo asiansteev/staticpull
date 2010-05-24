@@ -1,0 +1,15 @@
+Staticpull
+==========
+
+Mirror a site into Roundhouse CMS.
+
+Requires wget, and a system with the `file' command.
+
+
+Example
+=======
+
+URL=http://example.com/ rake staticpull
+
+
+Copyright (c) 2010 Todd Willey <todd@rubidine.com>, released under the MIT license
