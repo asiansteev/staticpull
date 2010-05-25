@@ -1,0 +1,7 @@
+name:               StaticPull
+version:            1.0
+description:        Mirror an exisiting domain's pages and assets into Roundhouse CMS.
+authors:            ['Todd Willey', 'asiansteev', 'Nikolai Warner']
+min_rh_version:     0.3.0
+homepage:           'http://github.com/asiansteev/staticpull'
+update_url:         'git://github.com/asiansteev/staticpull.git'

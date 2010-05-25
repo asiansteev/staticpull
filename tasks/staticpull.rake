@@ -25,7 +25,7 @@ namespace :staticpull do
 
   task :purge => [:environment] do
     Page.destroy_all
-    Upload.destroy_all
+    Asset.destroy_all
   end
 
   task :url do
