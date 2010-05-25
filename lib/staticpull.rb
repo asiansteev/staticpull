@@ -117,7 +117,7 @@ class Staticpull
 
 
       imgs.each do |i|
-        unless Upload.find_by_upload_file_name(File.basename i)
+        unless Asset.find_by_asset_file_name(File.basename i)
           import_asset "#{@domain}#{i}"
         end
       end
@@ -203,7 +203,7 @@ class Staticpull
 
 
       imgs.each do |i|
-        unless Upload.find_by_upload_file_name(File.basename i)
+        unless Asset.find_by_asset_file_name(File.basename i)
           import_asset "#{@domain}#{i}"
         end
       end
@@ -221,8 +221,8 @@ class Staticpull
       slug = File.basename(path)
       parent = find_or_create_parent(File.dirname(path))
 
-      asset = Upload.new(
-                :upload => open(url),
+      asset = Asset.new(
+                :asset => open(url),
                 :host => @host,
                 :published_at => Time.now
               )
@@ -250,7 +250,7 @@ class Staticpull
                :page_logic_behavior => 'PageLogicBehavior::PermanentRedirect'
              )
       page.add_behaviors
-      page.redirect_url = asset.attachment_for(:upload).url
+      page.redirect_url = asset.attachment_for(:asset).url
       page.save || alert_unsaved_page(page)
     end
 
